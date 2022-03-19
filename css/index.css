@@ -6,6 +6,7 @@
 }
 :root {
     --orange: #f27059;
+    --twentypx: 20px;
 }
 body,
 html {
@@ -16,6 +17,11 @@ html {
 /*========
 | HEADER |
 ==========*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
 .header h3 {
     font-weight: 300;
     font-size: 22px;
@@ -26,11 +32,16 @@ html {
     color: var(--orange);
     font-family: futura;
 }
+.header img {
+    width: 73px;
+    height: fit-content;
+    filter: drop-shadow(-2px 3px 2px rgba(0, 0, 0, 0.315));
+}
 /*========
 | SEARCH |
 ==========*/
 .search {
-    margin: 20px 0;
+    margin: var(--twentypx) 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,13 +132,13 @@ html {
 ==============*/
 .task {
     /* border: 1px solid red; */
-    margin-top: 20px;
+    margin-top: var(--twentypx);
 }
 .headTask {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--twentypx);
 }
 .headTask small {
     color: orangered;
@@ -187,4 +198,7 @@ html {
 @font-face {
     font-family: futura;
     src: url("../font/weezerfont.ttf");
+}
+
+@keyframes identifier {
 }
