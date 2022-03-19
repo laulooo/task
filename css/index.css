@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    font-family: futura;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --orange: #f27059;
+}
+body,
+html {
+    margin: 0;
+    padding: 15px 9px;
+    background-color: rgb(242, 242, 247);
+}
+/*========
+| HEADER |
+==========*/
+.header h3 {
+    font-weight: 300;
+    font-size: 22px;
+    font-family: "bakso";
+    margin-bottom: 5px;
+}
+.header h6 {
+    color: var(--orange);
+    font-family: futura;
+}
+/*========
+| SEARCH |
+==========*/
+.search {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.search .input {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 15px;
+    background-color: white;
+    gap: 9px;
+    color: #cfcfcf;
+    width: 90%;
+}
+.searchInput {
+    border: none;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.searchInput:focus {
+    outline: none;
+}
+::placeholder {
+    color: #cfcfcf;
+}
+.button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--orange);
+    border-radius: 50%;
+    box-shadow: 0 4px 7px #f2705987;
+    color: white;
+}
+/*============
+| CATEGORIES |
+==============*/
+.categories {
+    /* border: 1px solid black; */
+}
+.categories .wrapper {
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 63%;
+    gap: 9px;
+    /* border: solid 1px red; */
+    overflow-x: auto;
+}
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+.categories .category {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 9px;
+    overflow: hidden;
+    border: 6px solid white;
+    box-shadow: 2px 3px 10px rgb(0 0 0 / 25%);
+}
+.categories img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.categories .text {
+    background-color: rgba(255, 255, 255, 0.76);
+    border: 1.5px solid white;
+    width: 85%;
+    padding: 5px 9px;
+    position: absolute;
+    bottom: 19px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px rgba(156, 156, 156, 0.815);
+}
+.categories small {
+    color: orangered;
+    font-size: 10px;
+    font-weight: bold;
+}
+/*============
+|    TASK    |
+==============*/
+.task {
+    /* border: 1px solid red; */
+    margin-top: 20px;
+}
+.headTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.headTask small {
+    color: orangered;
+}
+
+.containerTask {
+    /* border: solid 1px red; */
+    display: grid;
+    grid-auto-flow: row;
+    gap: 19px;
+}
+.containerTask .item {
+    background-color: white;
+    border-radius: 9px;
+    padding: 15px;
+    box-shadow: 2px 3px 13px rgb(0 0 0 / 9%);
+}
+.headTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headTitle button {
+    background-color: var(--orange);
+    padding: 5px 12px;
+    border: none;
+    border-radius: 19px;
+    font-size: 10px;
+    color: white;
+}
+
+.item h5 {
+    margin-block: 9px;
+    color: grey;
+}
+.deadline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.deadline svg {
+    width: 17px;
+    color: var(--orange);
+}
+.deadline small {
+    font-size: 12px;
+    color: grey;
+}
+
+/* sampek sini */
+
+@font-face {
+    font-family: bakso;
+    src: url("../font/BaksoSapi.otf");
+}
+@font-face {
+    font-family: futura;
+    src: url("../font/weezerfont.ttf");
+}
