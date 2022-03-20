@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="css/index.css" />
     </head>
     <body>
+        <div class="loading">
+            <img src="img/catloading.gif" alt="" />
+        </div>
         <div class="header">
             <div class="greet">
                 <h3>Good Morning,</h3>
@@ -69,7 +72,7 @@
             <div class="containerTask">
                 <div class="item">
                     <div class="headTitle">
-                        <h4>Trigonometri sudut</h4>
+                        <h4>Trigonometri sudut <i data-feather="edit-2"></i></h4>
                         <button>4d</button>
                     </div>
                     <h5>Math</h5>
@@ -102,9 +105,14 @@
                 </div>
             </div>
         </div>
+        <!-- 
+            perlu membuat modal box untuk edit task card
+         -->
+        <nav></nav>
         <script src="https://unpkg.com/feather-icons"></script>
         <script>
             feather.replace();
         </script>
+        <script src="js/preload.js"></script>
     </body>
 </html>
