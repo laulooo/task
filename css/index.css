@@ -11,7 +11,7 @@
 body,
 html {
     margin: 0;
-    padding: 15px 9px;
+    padding: 15px 9.8px;
     background-color: rgb(242, 242, 247);
 }
 /*========
@@ -21,6 +21,9 @@ html {
     display: flex;
     justify-content: space-between;
     position: relative;
+}
+.header .greet {
+    width: 70%;
 }
 .header h3 {
     font-weight: 300;
@@ -32,11 +35,39 @@ html {
     color: var(--orange);
     font-family: futura;
 }
+.cutecat {
+    position: relative;
+    width: 30%;
+    display: flex;
+}
 .header img {
     width: 73px;
     height: fit-content;
-    filter: drop-shadow(-2px 3px 2px rgba(0, 0, 0, 0.315));
+    filter: drop-shadow(-1px 2px 1px rgba(0, 0, 0, 0.288));
+    position: absolute;
 }
+.header img:last-child {
+    animation: cutecat 1s infinite linear;
+    left: 13px;
+}
+@keyframes cutecat {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    60% {
+        left: 23px;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* permasalahan responvive cute cat */
 /*========
 | SEARCH |
 ==========*/
@@ -77,6 +108,9 @@ html {
     border-radius: 50%;
     box-shadow: 0 4px 7px #f2705987;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*============
 | CATEGORIES |
