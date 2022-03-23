@@ -250,7 +250,76 @@ div.headTitle > h4 > svg {
     color: grey;
 }
 
-/* sampek sini */
+/*============
+|    Dialog   |
+==============*/
+dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding-inline: var(--twentypx);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: rgba(212, 212, 212, 0.151);
+    backdrop-filter: blur(2.5px);
+}
+.modalTask form {
+    margin: 50% auto;
+    width: 100%;
+    padding: var(--twentypx);
+    display: grid;
+    grid-auto-flow: row;
+    background-color: white;
+    border-radius: 19px;
+}
+.modalTask h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+body > dialog > form > h3 > svg {
+    color: red;
+}
+
+.modalTask label {
+    margin-top: 9px;
+    font-weight: bold;
+}
+
+.modalTask input {
+    border-radius: 9px;
+    border: 1px solid #707070;
+    height: 30px;
+    padding-inline: 9px;
+}
+.modalTask h3 span {
+    color: orangered;
+}
+
+.buttonModal {
+    margin-top: 19px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+}
+.modalTask button,
+.modalTask select {
+    padding: 5px 9px;
+    border-radius: 9px;
+}
+.modalTask .save {
+    background-color: #4265e3;
+    border: none;
+    color: white;
+}
+.modalTask button:first-child {
+    background-color: #a1a1a1;
+    border: none;
+    color: white;
+}
 
 @font-face {
     font-family: bakso;
