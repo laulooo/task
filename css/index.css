@@ -7,6 +7,7 @@
 :root {
     --orange: #f27059;
     --twentypx: 20px;
+    --myblue: rgb(0 169 255);
 }
 body,
 html {
@@ -118,6 +119,9 @@ html {
 .searchInput:focus {
     outline: none;
 }
+.input:hover {
+    border: 1px dashed orangered;
+}
 ::placeholder {
     color: #cfcfcf;
 }
@@ -132,6 +136,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.button:hover {
+    box-shadow: 0 0 20px rgb(199, 90, 0) inset;
 }
 /*============
 | CATEGORIES |
@@ -257,13 +264,21 @@ dialog {
     width: 100%;
     height: 100%;
     position: fixed;
+    opacity: 0;
     padding-inline: var(--twentypx);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
     background-color: rgba(212, 212, 212, 0.151);
+    -webkit-backdrop-filter: blur(2.5px);
     backdrop-filter: blur(2.5px);
+    animation: dialog 0.9s forwards;
+}
+@keyframes dialog {
+    to {
+        opacity: 1;
+    }
 }
 .modalTask form {
     margin: 50% auto;
@@ -273,6 +288,13 @@ dialog {
     grid-auto-flow: row;
     background-color: white;
     border-radius: 19px;
+    transform: translateY(-199px);
+    animation: formBounce 1s forwards;
+}
+@keyframes formBounce {
+    to {
+        transform: none;
+    }
 }
 .modalTask h3 {
     display: flex;
@@ -289,11 +311,17 @@ body > dialog > form > h3 > svg {
     font-weight: bold;
 }
 
-.modalTask input {
+.modalTask input,
+.modalTask select {
     border-radius: 9px;
     border: 1px solid #707070;
     height: 30px;
     padding-inline: 9px;
+    outline: none;
+    transition: 0.5s;
+}
+.modalTask input:focus {
+    border: 1px double var(--myblue);
 }
 .modalTask h3 span {
     color: orangered;
@@ -305,13 +333,12 @@ body > dialog > form > h3 > svg {
     justify-content: flex-end;
     gap: 9px;
 }
-.modalTask button,
-.modalTask select {
+.modalTask button {
     padding: 5px 9px;
     border-radius: 9px;
 }
 .modalTask .save {
-    background-color: #4265e3;
+    background-color: var(--myblue);
     border: none;
     color: white;
 }
