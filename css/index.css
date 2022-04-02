@@ -229,14 +229,6 @@ html {
 div.headTitle > h4 > svg {
     width: 10px;
 }
-.headTitle button {
-    background-color: var(--orange);
-    padding: 5px 12px;
-    border: none;
-    border-radius: 19px;
-    font-size: 10px;
-    color: white;
-}
 
 .item h5 {
     margin-block: 9px;
@@ -248,6 +240,7 @@ div.headTitle > h4 > svg {
     align-items: center;
     gap: 10px;
 }
+
 .deadline svg {
     width: 17px;
     color: var(--orange);
@@ -255,6 +248,93 @@ div.headTitle > h4 > svg {
 .deadline small {
     font-size: 12px;
     color: grey;
+}
+
+.headTitle .action svg {
+    border-radius: 50%;
+    padding: 3px;
+    color: white;
+}
+/* first deisgn horizontl action */
+.headTitle .action svg:nth-child(2) {
+    background-color: yellowgreen;
+}
+.headTitle .action svg:nth-child(1) {
+    background-color: red;
+}
+.headTitle .action svg:nth-child(3) {
+    background-color: var(--myblue);
+}
+/* second design vertical action */
+.item:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+.rightside {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+.rightside svg {
+    color: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+.rightside svg:nth-child(1) {
+    background-color: var(--myblue);
+}
+.rightside svg:nth-child(2) {
+    background-color: yellowgreen;
+}
+.rightside svg:nth-child(3) {
+    background-color: red;
+}
+/* HOVER ACTION */
+.actions {
+    position: relative;
+}
+
+.actions > svg:first-child {
+    color: rgb(200 200 200);
+}
+.item:nth-child(4) > .headTitle > .actions > .Setting {
+    color: var(--orange);
+}
+.actions .actionContent {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    right: 5px;
+    transform: translateY(-20px);
+    box-shadow: 0px 2px 5px #f2705970;
+    border-radius: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.actionContent > svg {
+    display: block;
+    animation: alternate rotate 1s forwards;
+}
+.actionContent > svg:first-child {
+    color: var(--myblue);
+}
+.actionContent > svg:last-child {
+    color: rgb(204, 0, 0);
+}
+.actions:hover .actionContent {
+    display: block;
+    animation: dropdown 1s forwards;
+}
+@keyframes dropdown {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /*============
