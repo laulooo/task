@@ -229,6 +229,14 @@ html {
 div.headTitle > h4 > svg {
     width: 10px;
 }
+.headTitle button {
+    background-color: var(--orange);
+    padding: 5px 12px;
+    border: none;
+    border-radius: 19px;
+    font-size: 10px;
+    color: white;
+}
 
 .item h5 {
     margin-block: 9px;
@@ -240,7 +248,6 @@ div.headTitle > h4 > svg {
     align-items: center;
     gap: 10px;
 }
-
 .deadline svg {
     width: 17px;
     color: var(--orange);
@@ -248,46 +255,6 @@ div.headTitle > h4 > svg {
 .deadline small {
     font-size: 12px;
     color: grey;
-}
-
-.headTitle .action svg {
-    border-radius: 50%;
-    padding: 3px;
-    color: white;
-}
-/* first deisgn horizontl action */
-.headTitle .action svg:nth-child(2) {
-    background-color: yellowgreen;
-}
-.headTitle .action svg:nth-child(1) {
-    background-color: red;
-}
-.headTitle .action svg:nth-child(3) {
-    background-color: var(--myblue);
-}
-/* second design vertical action */
-.item:nth-child(3) {
-    display: flex;
-    justify-content: space-between;
-}
-.rightside {
-    display: flex;
-    flex-flow: column;
-    gap: 5px;
-}
-.rightside svg {
-    color: white;
-    border-radius: 50%;
-    padding: 3px;
-}
-.rightside svg:nth-child(1) {
-    background-color: var(--myblue);
-}
-.rightside svg:nth-child(2) {
-    background-color: yellowgreen;
-}
-.rightside svg:nth-child(3) {
-    background-color: red;
 }
 
 /*============
